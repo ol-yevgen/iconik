@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
             <body className={manrope.className}
                 suppressHydrationWarning={true}>
                 <Header />
-                <main>
+                {/* <main>
                     {children}
                 </main>
-                <Footer/>
+                <Footer/> */}
             </body>
         </html>
     )
