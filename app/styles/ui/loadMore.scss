@@ -1,0 +1,31 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.load__more {
+    @include flex-container-center;
+    gap: 18px;
+
+    width: 100%;
+    
+    border: none;
+    color: $whiteColor;
+    background: transparent;
+
+    @include transition-3s;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &:hover &-icon {
+        @include transition-4s;
+
+        transform: rotate(360deg);
+    }
+
+    &-border {
+        padding: 21px 0;
+        border: 1px solid $headerBordersColor;
+    }
+}

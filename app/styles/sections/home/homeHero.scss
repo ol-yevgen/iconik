@@ -1,0 +1,93 @@
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    &__content {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+
+        &-plans {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            @include flex-container-center;
+            flex-direction: column;
+        }
+    }
+
+    &__play {
+        @include flex-container-center;
+        justify-content: flex-start;
+        margin-top: 40px;
+
+        & > span {
+            margin-left: 20px;
+        }
+    }
+
+    &__services {
+        @include flex-container-center;
+        width: 100%;
+        height: 500px;
+
+        background-image: url("../../../../public/images/services/bg.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.home {
+    background-image: url("../../../../public/images/home/hero/video-background.webp");
+
+    @include backgroundImage-cover;
+
+    &__title {
+        max-width: 600px;
+    }
+}
+
+.plans {
+    &__hero {
+        background-image: url("../../../../public/images/plans/hero/video-bg.webp");
+        @include backgroundImage-cover;
+
+        &-title {
+            left: 0;
+            max-width: 970px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+    }
+
+    &__membership {
+        background-image: url("../../../../public/images/plans/plansMembership/membership.webp");
+
+        @include backgroundImage-cover;
+
+        &-title {
+            left: 0;
+            max-width: 970px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+    }
+
+    &__choose {
+        background-image: url("../../../../public/images/plans/choose/why-choose-iconik.webp");
+        @include backgroundImage-cover;
+
+        &-title {
+            left: 0;
+            max-width: 970px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+    }
+}

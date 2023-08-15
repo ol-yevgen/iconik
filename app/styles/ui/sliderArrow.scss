@@ -1,0 +1,65 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.arrow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    z-index: 5;
+
+    border-radius: 50%;
+    border: 1px solid $whiteColor;
+
+    background: transparent;
+
+    @include transition-3s;
+
+    &__left {
+        left: 0;
+    }
+
+    &__right {
+        right: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $whiteColor;
+    }
+
+    &:hover > svg > path {
+        stroke: $mainBackgroundColor;
+    }
+
+    &:disabled {
+        background: transparent;
+    }
+
+    &-full {
+        top: 0;
+    }
+
+    &-common {
+        width: 60px;
+height: 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .arrow {
+        width: 70px;
+        height: 70px;
+
+        &-full {
+            top: 25%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .arrow {
+        width: 50px;
+        height: 50px;
+    }
+}

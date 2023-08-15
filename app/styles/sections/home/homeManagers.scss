@@ -1,0 +1,21 @@
+.manager__card {
+    width: 360px;
+    
+    & > li > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &-name {
+        margin: 20px 0 6px 0;
+    }
+
+    &-title {
+        color: $lightGrayColor;
+    }
+}
+
+.container__managers {
+    padding-bottom: 90px;
+}

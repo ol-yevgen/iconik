@@ -1,0 +1,101 @@
+.social {
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 567px;
+        
+        & > p {
+            margin-bottom: 160px;
+        }
+    }
+
+    &__right {
+        max-width: 470px;
+        max-height: 470px;
+
+        padding: 30px;
+
+        background: $footerBackgroundColor;
+
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    &__right::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    &__links {
+        @include flex-container-center;
+        gap: 30px;
+    }
+
+    &__link {
+        position: relative;
+        @include flex-container-center;
+        background: none;
+
+        width: 170px;
+        height: 80px;
+
+        border: 1px solid $whiteColor;
+        color: $whiteColor;
+
+        @include transition-3s;
+
+        & > img {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+
+            @include transition-3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover > img {
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        gap: 16px;
+
+        width: 100%;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &-description {
+            color: $formPlaceholderColor;
+        }
+
+        & > a {
+            padding: 15px 30px;
+
+            background: $mainBackgroundColor;
+
+            @include transition-3s;
+
+            &:hover {
+                background: #131313eb;
+            }
+        }
+    }
+}

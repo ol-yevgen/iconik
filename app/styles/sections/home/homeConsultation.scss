@@ -1,0 +1,35 @@
+.consultation {
+    background-image: url("../../../../public/images/home/consultation/bg.webp");
+    @include backgroundImage-cover;
+
+    width: 100%;
+    height: 100%;
+
+    &__form {
+        position: relative;
+        @include flex-container-center;
+
+        max-width: 625.967px;
+        min-height: 517.027px;
+
+        margin: 0 auto;
+
+        &-decoration {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+
+            min-height: 442px;
+
+            transform: rotate(-8deg);
+
+            border-radius: 20px;
+            background: rgba(45, 45, 46, 0.5);
+            backdrop-filter: blur(10px);
+
+            &-decoration--contacts {
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.selector {
+    position: relative;
+    padding: 10px 23px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+    }
+
+    &-item {
+        @include flex-container-align-start;
+        justify-content: flex-start;
+
+        width: 90px;
+        padding: 10px 23px;
+
+        color: $lightGrayColor;
+
+        @include transition-4s;
+
+        &:hover {
+            color: $whiteColor;
+            background: $headerSelectorHoverColor;
+        }
+    }
+
+    &-first {
+        display: flex;
+        align-items: center;
+    }
+
+    &-show {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        width: 100%;
+    }
+
+    &-close {
+        background: none;
+    }
+
+    &-open {
+        background: $footerBackgroundColor;
+    }
+
+    &__arrow {
+        border: solid $headerSelectorHoverColor;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 10px;
+
+        &-up {
+            transform: rotate(-135deg);
+        }
+
+        &-down {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__filters {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin-bottom: 30px;
+        border: 1px solid $footerBackgroundColor;
+
+        & .selector-first {
+            justify-content: space-between;
+            text-transform: uppercase;
+        }
+
+        & .selector-item {
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        & .selector-show {
+            top: 43px;
+
+            border-top: 1px solid $headerSelectorHoverColor;
+        }
+
+        &-services {
+            display: flex;
+            align-items: center;
+
+            margin: 0;
+            width: 30%;
+            border: none;
+
+            & .selector-first {
+                text-transform: capitalize;
+            }
+
+            & .selector-item {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &__flags {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
+    &__flags &-item {
+        padding: 10px;
+    }
+
+    &__image {
+        margin-right: 5px;
+    }
+}
+
+.services__filters {
+    @include flex-container-space-between;
+
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    & > span {
+        color: $lightGrayColor;
+        width: 40%;
+    }
+
+    &-left {
+        @include flex-container-center;
+        width: 100%;
+    }
+
+    &-dec {
+        @include flex-container-center;
+        width: 60px;
+        height: 60px;
+
+        border: 1px solid $lightGrayColor;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .selector__filters-services {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .services__filters {
+        width: 100%;
+
+        &-services {
+            width: 60%;
+        }
+        &-left {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media (max-width: 507px) {
+    .selector {
+        &__image {
+            margin: 0;
+        }
+        &__flags {
+            left: -11px;
+        }
+
+        &__filters-services {
+            width: 100%;
+        }
+    }
+
+    .services__filters {
+        &-dec {
+            width: 44px;
+            height: 44px;
+        }
+    }
+}

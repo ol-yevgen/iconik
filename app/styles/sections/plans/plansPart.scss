@@ -1,0 +1,18 @@
+.container__plans-part {
+    @include flex-container-center;
+    gap: 20px;
+    
+    height: 675px;
+    padding-bottom: 140px;
+}
+
+.plans__part {
+    &-cards {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &-list {
+        margin-bottom: 40px;
+    }
+}

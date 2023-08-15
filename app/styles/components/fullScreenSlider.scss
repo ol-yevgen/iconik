@@ -1,0 +1,132 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.swiper__container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper__full {
+    position: relative;
+    height: 100%;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.8999999761581421;
+        background: linear-gradient(180deg, rgba(27, 27, 27, 0) 16.8%, #1b1b1b 83%);
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(180deg, rgba(27, 27, 27, 0.5) 0%, rgba(27, 27, 27, 0) 18.09%);
+    }
+
+    &-item {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.swiper__prescreen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    background: $mainBackgroundColor;
+
+    & > .swiper-wrapper {
+        padding: 10px;
+        height: 145px;
+    }
+
+    &-item {
+        width: 217px !important;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    .swiper__prescreen {
+        width: 125%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .swiper__prescreen {
+        width: 125%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .swiper__prescreen {
+        width: 195%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .swiper__prescreen {
+        width: 270%;
+
+        & > .swiper-wrapper {
+            height: 105px;
+        }
+
+        &-item {
+            width: 160px !important;
+
+            margin-right: 6px !important;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .swiper__prescreen {
+        width: 215%;
+
+        & > .swiper-wrapper {
+            height: 70px;
+        }
+
+        &-item {
+            width: 105px !important;
+
+            margin-right: 3px !important;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .swiper__prescreen {
+        width: 515%;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.btn {
+    padding: 16px 26px;
+
+    border: none;
+    border-radius: 2px;
+
+    color: $whiteColor;
+    background: $mainPurpleColor;
+
+    @include transition-4s;
+
+    &:hover {
+        cursor: pointer;
+        background: $mainPurpleHoverColor;
+    }
+
+    &__full {
+        @include flex-container-center;
+
+        width: 100%;
+        height: 64px;
+    }
+
+    &__services {
+        @include flex-container-center;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+
+        width: 100%;
+        height: 64px;
+
+        opacity: 0;
+    }
+
+    &__submit {
+        width: 100%;
+
+        &-contacts {
+            width: 60%;
+            padding: 24px;
+        }
+    }
+
+    &:disabled {
+        color: $buttonDisabledTextColor;
+        background: $buttonDisabledBackgroundColor;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .btn__submit-contacts {
+        width: 80%;
+    }
+}

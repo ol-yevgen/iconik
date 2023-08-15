@@ -1,0 +1,5 @@
+.services__gallery {
+    @include flex-container-center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

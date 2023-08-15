@@ -1,0 +1,80 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    border-bottom: 1px solid $headerBordersColor;
+
+    &__scrolled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 900;
+
+        width: 100%;
+        height: 88px;
+        background: $mainBackgroundColor;
+
+        transition: all .3s ease-in-out;
+    }
+
+    &__content {
+        position: relative;
+        @include flex-container-space-between;
+        z-index: 1000;
+        width: 100%;
+    padding: 0 20px;
+    }
+
+    &__menu {
+        @include flex-container-space-between;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__menu > ul {
+        @include flex-container-space-between;
+        width: 65%;
+        height: 100%;
+    }
+
+    &__logo {
+        padding-right: 33px;
+    }
+
+    &__services {
+        @include flex-container-center;
+        height: 100%;
+        padding: 33px 33px;
+        border-left: 1px solid $headerBordersColor;
+        border-right: 1px solid $headerBordersColor;
+    }
+
+    &__lang {
+        @include flex-container-center;
+
+        position: relative;
+        padding: 23px 0;
+        height: 100%;
+        border-left: 1px solid $headerBordersColor;
+    }
+}
+
+.nav {
+    @include flex-container-center;
+    @include transition-4s;
+
+    &:hover {
+        color: $mainPurpleColor;
+    }
+}
+
+.services-icon {
+    margin-right: 10px;
+}

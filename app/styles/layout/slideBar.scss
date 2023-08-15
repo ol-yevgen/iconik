@@ -1,0 +1,28 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.mobile__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include flex-container-center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    min-width: 100%;
+    height: calc(100vh - 80px);
+
+    margin-top: 80px;
+    padding: 30px;
+
+    background: $mainBackgroundColor;
+
+    border-top: 1px solid $headerBordersColor;
+
+    overflow-x: hidden;
+
+    &-item {
+        margin-bottom: 20px;
+    }
+}

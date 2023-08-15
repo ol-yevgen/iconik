@@ -1,0 +1,61 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.play {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    border: 1px solid $whiteColor;
+    border-radius: 50%;
+
+    @include transition-3s;
+    
+    &:hover {
+        cursor: pointer;
+        background: #f6f6f6;
+    }
+    
+    &__transparent {
+        background: transparent;
+
+        &:hover {
+            cursor: pointer;
+            background: #f6f6f649;
+        }
+    }
+
+    &__contacts {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    & > svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -45%);
+    }
+}
+
+@media (max-width: 900px) {
+    .play {
+        width: 70px;
+        height: 70px;
+
+        & > svg {
+            width: 10px;
+            height: 12px;
+        }
+    }
+}
+
+@media (max-width: 507px) {
+    .play {
+        width: 50px;
+        height: 50px;
+    }
+}

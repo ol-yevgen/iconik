@@ -1,0 +1,253 @@
+@import "../public/fonts/fonts.scss";
+@import "./styles/variables.scss";
+@import "./styles//mixins.scss";
+
+:root {
+    --max-width: 1800px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    color: $whiteColor;
+    background: $mainBackgroundColor;
+
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html,
+body::-webkit-scrollbar {
+    background: $footerBackgroundColor;
+}
+
+html,
+body::-webkit-scrollbar-thumb {
+    background: $mainPurpleColor;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Al Veshion";
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.main__text {
+    font-size: 16px;
+    line-height: 24px;
+
+    &-2 {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    &-4 {
+        font-family: "Al Veshion";
+
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &-5 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &-6 {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+    }
+}
+
+.text {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.active {
+    color: $mainPurpleColor;
+}
+
+.wrapper {
+    max-width: 2000px;
+    min-height: 100%;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    min-height: 100%;
+
+    margin: 0 auto;
+    padding-bottom: 320px;
+
+    &__managers {
+        padding: 0;
+    }
+
+    &-margin {
+        margin-top: 180px;
+        padding-bottom: 180px;
+    }
+}
+
+.container-full__width {
+    padding: 160px 20px;
+}
+
+.title__container {
+    margin: 0 auto;
+    max-width: 970px;
+
+    text-align: center;
+
+    & > h2 {
+        text-align: center;
+    }
+}
+
+.text__center-small {
+    width: 400px;
+
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 0 30px;
+
+    line-height: 24px;
+}
+
+.section__title {
+    text-align: center;
+    margin: 180px 0 60px 0;
+
+    &-start {
+        margin-bottom: 30px;
+        padding-right: 50px;
+        text-align: left;
+    }
+
+    &-mt0 {
+        margin-top: 0;
+    }
+
+    &-form {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 30px;
+
+        text-align: left;
+    }
+
+    &-inner {
+        margin: 0 auto;
+        padding: 180px 250px 60px 0;
+        max-width: 1170px;
+        text-align: left;
+    }
+}
+
+.section__text {
+    width: 100%;
+    margin: 30px 0 60px 0;
+    text-align: center;
+
+    &-left {
+        text-align: left;
+    }
+}
+
+.scrollOff {
+    overflow: hidden;
+}
+
+.purple__question {
+    color: $mainPurpleColor;
+}
+
+@import "./styles/layout/header.scss";
+
+//Home Page
+@import "./styles/sections/home/homeHero.scss";
+@import "./styles/sections/home/homeOffer.scss";
+@import "./styles/sections/home/homePart.scss";
+@import "./styles/sections/home/homePlans.scss";
+@import "./styles/sections/home/homeGallery.scss";
+@import "./styles/sections/home/homeEvents.scss";
+@import "./styles/sections/home/homeManagers.scss";
+@import "./styles/sections/home/homeConsultation.scss";
+@import "./styles/sections/home/homeSocial.scss";
+
+//Plans Page
+@import "./styles/sections/plans/plansIncluded.scss";
+@import "./styles/sections/plans/plansPart.scss";
+@import "./styles/sections/plans/plansChoose.scss";
+@import "./styles/sections/plans/plansQuestions.scss";
+
+//About
+@import "./styles/sections/about/aboutGallery.scss";
+@import "./styles/sections/about/aboutContact.scss";
+
+//Gallery Page
+@import "./styles/sections/gallery/galleryPage.scss";
+@import "./styles/sections/gallery/galleryInner/galleryInner.scss";
+
+//Services
+@import "./styles/sections/services/servicesGallery.scss";
+@import "./styles/sections/services/serviceInner.scss";
+
+//Common Section
+@import "./styles/sections/textWithSliderSection.scss";
+
+@import "./styles/layout/footer.scss";
+
+@import "./styles/media.scss";

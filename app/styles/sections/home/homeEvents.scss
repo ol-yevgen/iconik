@@ -1,0 +1,32 @@
+.events {
+    @include flex-container-center;
+    flex-direction: column;
+
+    &__content {
+        @include flex-container-center;
+        gap: 20px;
+        width: 100%;
+        min-height: 100%;
+    }
+}
+
+.event {
+    position: relative;
+    @include backgroundImage-cover;
+
+    width: 613px;
+    height: 500px;
+
+    padding: 40px;
+
+    @include flex-container-center;
+    flex-direction: column;
+
+    &__title {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+
+        width: 80%;
+    }
+}
