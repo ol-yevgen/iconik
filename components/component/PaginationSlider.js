@@ -13,7 +13,7 @@ import '../../app/styles/components/paginationSlider.scss';
 
 import { Pagination, Navigation } from 'swiper/modules';
 
-export const PaginationSlider = ({ paginationSliderAbout, mobileSlider }) => {
+export default function PaginationSlider ({ paginationSliderAbout, mobileSlider }) {
     const windowWidth = useResize()
 
     return (

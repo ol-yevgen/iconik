@@ -64,7 +64,7 @@ import { Questions } from './component/Questions';
 import { Gallery } from "./component/Gallery";
 import { FullScreenSlider } from './component/FullScreenSlider';
 import AboutWhyText from "./component/AboutWhyText";
-import { PaginationSlider } from "./component/PaginationSlider";
+import PaginationSlider from "./component/PaginationSlider";
 import SliderWithoutText from "./component/SliderWithoutText";
 import SocialAll from "./component/SocialAll";
 import ContactSocial from "./component/ContactsSocial";
